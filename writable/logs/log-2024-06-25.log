@@ -1,0 +1,151 @@
+ERROR - 2024-06-25 06:43:48 --> mysqli_sql_exception: MySQL server has gone away in D:\xampp\htdocs\sigkab\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\xampp\htdocs\sigkab\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\xampp\htdocs\sigkab\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\xampp\htdocs\sigkab\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\xampp\htdocs\sigkab\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\htdocs\sigkab\system\Model.php(199): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\sigkab\system\BaseModel.php(577): CodeIgniter\Model->doFind(true, 1)
+#6 D:\xampp\htdocs\sigkab\app\Controllers\Dashboard.php(17): CodeIgniter\BaseModel->find(1)
+#7 D:\xampp\htdocs\sigkab\system\CodeIgniter.php(941): App\Controllers\Dashboard->index()
+#8 D:\xampp\htdocs\sigkab\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#9 D:\xampp\htdocs\sigkab\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\xampp\htdocs\sigkab\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-06-25 06:43:48 --> CodeIgniter\Database\Exceptions\DatabaseException: MySQL server has gone away
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `kabupaten`
+WHERE `kabupaten`.`id_kabupaten` = :kabupaten.id_kabupaten:', [...], false)
+ 2 SYSTEMPATH\Model.php(199): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(577): CodeIgniter\Model->doFind(true, 1)
+ 4 APPPATH\Controllers\Dashboard.php(17): CodeIgniter\BaseModel->find(1)
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Dashboard->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-25 06:43:48 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: MySQL server has gone away
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `kabupaten`
+WHERE `kabupaten`.`id_kabupaten` = 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `kabupaten`
+WHERE `kabupaten`.`id_kabupaten` = 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `kabupaten`
+WHERE `kabupaten`.`id_kabupaten` = :kabupaten.id_kabupaten:', [...], false)
+ 4 SYSTEMPATH\Model.php(199): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(577): CodeIgniter\Model->doFind(true, 1)
+ 6 APPPATH\Controllers\Dashboard.php(17): CodeIgniter\BaseModel->find(1)
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Dashboard->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-25 06:43:48 --> [Caused by] mysqli_sql_exception: MySQL server has gone away
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `kabupaten`
+WHERE `kabupaten`.`id_kabupaten` = 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `kabupaten`
+WHERE `kabupaten`.`id_kabupaten` = 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `kabupaten`
+WHERE `kabupaten`.`id_kabupaten` = 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `kabupaten`
+WHERE `kabupaten`.`id_kabupaten` = :kabupaten.id_kabupaten:', [...], false)
+ 5 SYSTEMPATH\Model.php(199): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(577): CodeIgniter\Model->doFind(true, 1)
+ 7 APPPATH\Controllers\Dashboard.php(17): CodeIgniter\BaseModel->find(1)
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Dashboard->index()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-06-25 06:43:56 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\xampp\htdocs\sigkab\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 D:\xampp\htdocs\sigkab\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'sigkab', 3306, '', 0)
+#1 D:\xampp\htdocs\sigkab\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\xampp\htdocs\sigkab\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\xampp\htdocs\sigkab\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\htdocs\sigkab\system\Model.php(199): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\sigkab\system\BaseModel.php(577): CodeIgniter\Model->doFind(true, 1)
+#6 D:\xampp\htdocs\sigkab\app\Controllers\Dashboard.php(17): CodeIgniter\BaseModel->find(1)
+#7 D:\xampp\htdocs\sigkab\system\CodeIgniter.php(941): App\Controllers\Dashboard->index()
+#8 D:\xampp\htdocs\sigkab\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#9 D:\xampp\htdocs\sigkab\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\xampp\htdocs\sigkab\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\xampp\htdocs\sigkab\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 D:\xampp\htdocs\sigkab\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\xampp\htdocs\sigkab\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\xampp\htdocs\sigkab\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\xampp\htdocs\sigkab\system\Model.php(199): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\xampp\htdocs\sigkab\system\BaseModel.php(577): CodeIgniter\Model->doFind(true, 1)
+#5 D:\xampp\htdocs\sigkab\app\Controllers\Dashboard.php(17): CodeIgniter\BaseModel->find(1)
+#6 D:\xampp\htdocs\sigkab\system\CodeIgniter.php(941): App\Controllers\Dashboard->index()
+#7 D:\xampp\htdocs\sigkab\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#8 D:\xampp\htdocs\sigkab\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\sigkab\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-06-25 06:43:56 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `kabupaten`
+WHERE `kabupaten`.`id_kabupaten` = :kabupaten.id_kabupaten:', [...], false)
+ 3 SYSTEMPATH\Model.php(199): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(577): CodeIgniter\Model->doFind(true, 1)
+ 5 APPPATH\Controllers\Dashboard.php(17): CodeIgniter\BaseModel->find(1)
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Dashboard->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-25 07:07:22 --> Error: Class "App\Models\UniversitasModel" not found
+in APPPATH\Controllers\Dashboard.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Dashboard->index()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-25 07:07:23 --> Error: Class "App\Models\UniversitasModel" not found
+in APPPATH\Controllers\Dashboard.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Dashboard->index()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-25 07:09:23 --> Error: Class "App\Models\UniversitasModel" not found
+in APPPATH\Controllers\Dashboard.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Dashboard->index()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-25 07:12:21 --> Error: Class "App\Models\UniversitasModel" not found
+in APPPATH\Controllers\Dashboard.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Dashboard->index()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-25 07:12:22 --> Error: Class "App\Models\UniversitasModel" not found
+in APPPATH\Controllers\Dashboard.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Dashboard->index()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-25 07:15:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-25 07:17:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-25 07:17:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-25 07:17:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-25 07:20:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-25 07:20:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-25 07:20:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-25 07:20:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-25 07:20:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-25 07:24:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-25 07:25:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-25 07:25:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-25 07:25:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-25 07:25:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
